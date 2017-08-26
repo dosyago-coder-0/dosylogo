@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<meta charset=utf8>
+<meta name=viewport content="width=device-width, initial-scale=1">
+<title>DOSYAGO</title>
+<style>
+  main {
+    border: 40px solid;
+    margin: 0 auto;
+    max-width: 67%;
+    background: lime;
+    background: #c0ffee;
+    margin-top: 50px;
+  }
+  article {
+    display: flex;
+    width: auto;
+    height: auto;
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+  }
+  circle {
+    width: 80px;
+    height: 80px;
+    background: black;
+    border-radius: 80px;
+  }
+  chevron {
+    transform: rotate(-45deg);
+    border-left: 80px solid;
+    border-bottom: 80px solid;
+    width: 80px;
+    height: 80px;
+    display: block;
+  }
+  trunk {
+    width: 80px;
+    height: calc( 1.618 * 80px );
+    background: black;
+  }
+  text {
+    font-size: 80pt;
+    font-family: sans-serif;
+    letter-spacing: -3.75px;
+    font-weight: bold;
+  }
+</style>
+<main>
+  <article>
+    <circle></circle>
+    <chevron></chevron>
+    <trunk></trunk>
+  </article>
+  <article>
+    <text>DOSYAGO</text>
+  </article>
+</main>

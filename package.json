@@ -1,0 +1,27 @@
+{
+  "name": "dosylogo",
+  "version": "1.0.0",
+  "description": "All our logos. In one place.",
+  "main": "app.js",
+  "scripts": {
+    "test": "beefy app.js 8080"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dosyago-coder-0/dosylogo.git"
+  },
+  "keywords": [
+    "logo",
+    "dosyago",
+    "dosy",
+    "dosycorp",
+    "\"visual",
+    "assets\""
+  ],
+  "author": "Kris <writetocris@outlook.com> (https://2yago.com)",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/dosyago-coder-0/dosylogo/issues"
+  },
+  "homepage": "https://github.com/dosyago-coder-0/dosylogo#readme"
+}
