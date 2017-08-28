@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<meta charset=utf8>
+<meta name=viewport content="width=device-width, initial-scale=1">
+<title>PROJECTANT</title>
+<style>
+  main {
+    border: 40px solid;
+    margin: 0 auto;
+    max-width: 67%;
+    background: lime;
+    background: #c0ffee;
+    margin-top: 50px;
+  }
+  article {
+    display: flex;
+    width: auto;
+    height: auto;
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+  }
+  .squarebox {
+    padding-top:60px;
+  }
+  square {
+    width: 120px;
+    height: 120px;
+    border-style: solid;
+    transform-style: preserve-3d;
+    backface-visibility: visible;
+    box-sizing:border-box;
+  }
+  square.left {
+    transform: rotateY(90deg) translateZ(78px) rotateZ(-30deg) rotateY(45deg);
+    border-width: 30px 30px 2px 2px;
+  }
+  square.top {
+    transform: rotateX(90deg) translateZ(73px) rotateX(-30deg) rotateZ(-45deg);
+    border-width: 2px 30px 30px 2px;
+  }
+  square.right {
+    transform: rotateY(-90deg) translateZ(78px) rotateZ(-30deg) rotateY(45deg);
+    border-width: 2px 2px 30px 30px;
+  }
+  text {
+    font-size: 80pt;
+    font-family: sans-serif;
+    letter-spacing: -3.75px;
+    font-weight: bold;
+  }
+</style>
+<main>
+  <article class=squarebox>
+    <square class=left></square>
+    <square class=top></square>
+    <square class=right></square>
+  </article>
+  <article>
+    <text>PROJECTANT</text>
+  </article>
+</main>
