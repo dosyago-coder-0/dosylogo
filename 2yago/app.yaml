@@ -8,7 +8,10 @@ handlers:
   static_files: favicon.png
   upload: favicon\.png
   secure: always
-- url: /.*
+- url: /
   static_files: pa.logo.html
   upload: pa\.logo\.html
+  secure: always
+- url: /.*
+  static_dir: styles
   secure: always
