@@ -5,16 +5,17 @@
 <link rel=stylesheet href="nav.css">  
 <title>PROJECTANT</title>
 <style>
+  :root {
+    font-size: 16px; 
+  }
   body {
-    color: #c0ffee;
+    color: blue;
   }
   main {
-    border: 15.8px solid transparent;
-    margin: 400px auto;
-    max-width: 67%;
-    margin-top: 1rem;
     position: relative;
-    transform: translateY(-125px);
+    border: 15.8px solid transparent;
+    margin: 10% auto;
+    max-width: 67%;
   }
   article {
     display: flex;
@@ -26,7 +27,6 @@
   }
   .squarebox {
     min-height: 300px;
-    transform: translateY(40px);
   }
   circle {
     position: absolute;
@@ -34,7 +34,7 @@
     width: 290px;
     height: 290px;
     border-radius: 290px;
-    border-width: 30px;
+    border-width: 32px;
     border-style: solid;
     background-color: lime;
     transform: translateY(-20px);
@@ -60,23 +60,17 @@
     transform: rotateY(-90deg) translateZ(78px) rotateZ(-30deg) rotateY(45deg);
     border-width: 2px 2px 30px 30px;
   }
-  span.text {
-    margin-top: 10px;
-    font-size: 8vw;
-    font-weight: 300;
-    font-family: "Times New Roman";
-    letter-spacing: 2px;
-  }
   main svg text {
     font-size: 30px;
     font-family: Arial;
     font-weight: bold;
+    line-height: 2px;
   }
   main svg {
     position: absolute;
     left: 50%;
-    top: 33.3%
-    transform: translate(-50%,-50%) rotate(45deg);
+    top: -29px;
+    transform: translate(-50%,0) rotate(45deg);
     z-index: 2;
     pointer-events: none;
     width: 350px;
@@ -85,7 +79,6 @@
     margin: 0 auto;
   }
 </style>
-
 <main>
   <svg>
     <path id=disc d="

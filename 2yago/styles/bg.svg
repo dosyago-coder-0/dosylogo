@@ -9,7 +9,7 @@
         <feTurbulence 
           baseFrequency="0.014"
           numOctaves="4"
-          seed="${Math.round(Math.random()*10000)}"
+          seed="5957"
           type="turbulence"
           result="clouds"
         />
