@@ -1,0 +1,11 @@
+{
+  "name": "xxxyago",
+  "version": "1.0.2",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kris <writetocris@outlook.com> (https://2yago.com)",
+  "license": "ISC"
+}

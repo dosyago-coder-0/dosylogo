@@ -1,0 +1,14 @@
+service: dosyago
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /favicon.png
+  static_files: favicon.png
+  upload: favicon\.png
+  secure: always
+- url: /.*
+  static_files: pa.logo.html
+  upload: pa\.logo\.html
+  secure: always

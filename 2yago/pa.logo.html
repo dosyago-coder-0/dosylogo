@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<meta charset=utf8>
+<meta name=viewport content="width=device-width, initial-scale=1, user-scalable=no">
+<link rel="icon" type="image/png" href="/favicon.png">  
+<title>PROJECTANT</title>
+<style>
+  body {
+    color: #c0ffee;
+  }
+  main {
+    border: 15.8px solid transparent;
+    margin: 0 auto;
+    max-width: 67%;
+    margin-top: 1rem;
+    position: relative;
+    transform: translateY(-125px);
+  }
+  article {
+    display: flex;
+    width: auto;
+    height: auto;
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+  }
+  .squarebox {
+    min-height: 300px;
+    transform: translateY(40px);
+  }
+  circle {
+    position: absolute;
+    display: block;
+    width: 290px;
+    height: 290px;
+    border-radius: 290px;
+    border-width: 30px;
+    border-style: solid;
+    background-color: lime;
+    transform: translateY(-20px);
+  }
+  square {
+    width: 120px;
+    height: 120px;
+    border-style: solid;
+    transform-style: preserve-3d;
+    backface-visibility: visible;
+    box-sizing:border-box;
+    flex-shrink: 0;
+  }
+  square.left {
+    transform: rotateY(90deg) translateZ(78px) rotateZ(-30deg) rotateY(45deg);
+    border-width: 30px 30px 2px 2px;
+  }
+  square.top {
+    transform: rotateX(90deg) translateZ(73px) rotateX(-30deg) rotateZ(-45deg);
+    border-width: 2px 30px 30px 2px;
+  }
+  square.right {
+    transform: rotateY(-90deg) translateZ(78px) rotateZ(-30deg) rotateY(45deg);
+    border-width: 2px 2px 30px 30px;
+  }
+  span.text {
+    margin-top: 10px;
+    font-size: 8vw;
+    font-weight: 300;
+    font-family: "Times New Roman";
+    letter-spacing: 2px;
+  }
+  main svg text {
+    font-size: 30px;
+    font-family: Arial;
+    font-weight: bold;
+  }
+  main svg {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,11px) rotate(45deg);
+    z-index: 2;
+    pointer-events: none;
+    width: 350px;
+    height: 350px;
+    box-sizing: border-box;
+    margin: 0 auto;
+  }
+</style>
+<style>
+  body {
+    margin: 0;
+    overflow-x: hidden;
+  }
+  aside.bg {
+    background: purple;
+    image-rendering: pixelated;
+    width: 10%;
+    height: 10%;
+    position: relative;
+    filter: hue-rotate(330deg) saturate(4.7);
+    transform: scale3d(100,100,1);
+    transform-origin: 0px 0px 0;
+  }    
+  aside.bg svg {
+    filter: hue-rotate(330deg);
+  }
+</style>
+<aside class=bg>
+  <svg width=100% height=100%>
+    <defs>
+      <filter id="noise" 
+        filterUnits="objectBoundingBox"
+        x=0 y=0 width=100% height=100%>
+          <feTurbulence
+            baseFrequency=0.015 
+            numOctaves=1
+            xseed=9729
+            seed=${Math.round(Math.random()*10000)} 
+            stitchTiles=stitch 
+            type=turbulence
+          />
+      </filter> 
+    </defs>
+    <rect x=0 y=0 width=100% height=100% filter=url(#noise)></rect>
+  </svg>
+</aside>
+<main>
+  <svg>
+    <path id=disc d="
+      M 175 175
+      m -150, 0
+      a 150,150 0 1,1 300, 0
+      a 150,150 0 1,1 -300, 0
+      "
+      fill="transparent"/>
+    <text fill=lime>
+      <textPath alignment-baseline=bottom xlink:href="#disc">
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        DOSYAGO 
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;
+        &#9733;
+        &nbsp;
+        &nbsp;
+        PROJECT ANT
+        &nbsp;
+        &nbsp;
+        &#9733;
+        &nbsp;
+        &nbsp;
+        ALL THE DATA
+        &nbsp;
+        &#9733;
+      </textPath>
+    </text>
+  </svg>
+  <article class=squarebox>
+    <circle></circle>
+    <square class=left></square>
+    <square class=top></square>
+    <square class=right></square>
+  </article>
+  <article>
+    <span class=text>PROJECTANT</span>
+  </article>
+</main>
