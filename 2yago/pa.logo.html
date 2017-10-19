@@ -78,8 +78,23 @@
     box-sizing: border-box;
     margin: 0 auto;
   }
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    body:before {
+      background: rgb(130,20,200) url(bg.svg);
+    }
+    circle {
+      transform: translateY(-200px);
+    }
+    main svg {
+      top: -106px;
+      left: calc(50% - 4px);      
+    }
+    main.banner {
+      margin: 20% auto;
+    }
+  }
 </style>
-<main>
+<main class=banner>
   <svg>
     <path id=disc d="
       M 175 175

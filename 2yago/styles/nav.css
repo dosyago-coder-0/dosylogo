@@ -16,3 +16,6 @@
     margin: 0;
     overflow-x: hidden;
   }
+  main.banner {
+    display: table;
+  }
