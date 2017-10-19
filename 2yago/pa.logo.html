@@ -5,94 +5,108 @@
 <link rel=stylesheet href="nav.css">  
 <title>PROJECTANT</title>
 <style>
-  :root {
-    font-size: 16px; 
-  }
-  body {
-    color: blue;
-  }
-  main {
-    position: relative;
-    border: 15.8px solid transparent;
-    margin: 10% auto;
-    max-width: 67%;
-  }
-  article {
-    display: flex;
-    width: auto;
-    height: auto;
-    padding: 1rem;
-    align-items: center;
-    justify-content: center;
-  }
-  .squarebox {
-    min-height: 300px;
-  }
-  circle {
-    position: absolute;
-    display: block;
-    width: 290px;
-    height: 290px;
-    border-radius: 290px;
-    border-width: 32px;
-    border-style: solid;
-    background-color: lime;
-    transform: translateY(-20px);
-  }
-  square {
-    width: 120px;
-    height: 120px;
-    border-style: solid;
-    transform-style: preserve-3d;
-    backface-visibility: visible;
-    box-sizing:border-box;
-    flex-shrink: 0;
-  }
-  square.left {
-    transform: rotateY(90deg) translateZ(78px) rotateZ(-30deg) rotateY(45deg);
-    border-width: 30px 30px 2px 2px;
-  }
-  square.top {
-    transform: rotateX(90deg) translateZ(73px) rotateX(-30deg) rotateZ(-45deg);
-    border-width: 2px 30px 30px 2px;
-  }
-  square.right {
-    transform: rotateY(-90deg) translateZ(78px) rotateZ(-30deg) rotateY(45deg);
-    border-width: 2px 2px 30px 30px;
-  }
-  main svg text {
-    font-size: 30px;
-    font-family: Arial;
-    font-weight: bold;
-    line-height: 2px;
-  }
-  main svg {
-    position: absolute;
-    left: 50%;
-    top: -29px;
-    transform: translate(-50%,0) rotate(45deg);
-    z-index: 2;
-    pointer-events: none;
-    width: 350px;
-    height: 350px;
-    box-sizing: border-box;
-    margin: 0 auto;
-  }
-  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-    body:before {
-      background: rgb(130,20,200) url(bg.svg);
+  /** all browsers **/
+    :root {
+      font-size: 16px; 
+    }
+    body {
+      color: blue;
+    }
+    main {
+      position: relative;
+      border: 15.8px solid transparent;
+      margin: 10% auto;
+      max-width: 67%;
+    }
+    article {
+      display: flex;
+      width: auto;
+      height: auto;
+      padding: 1rem;
+      align-items: center;
+      justify-content: center;
+    }
+    .squarebox {
+      min-height: 300px;
     }
     circle {
-      transform: translateY(-200px);
+      position: absolute;
+      display: block;
+      width: 290px;
+      height: 290px;
+      border-radius: 290px;
+      border-width: 32px;
+      border-style: solid;
+      background-color: lime;
+      transform: translateY(-20px);
+    }
+    square {
+      width: 120px;
+      height: 120px;
+      border-style: solid;
+      transform-style: preserve-3d;
+      backface-visibility: visible;
+      box-sizing:border-box;
+      flex-shrink: 0;
+    }
+    square.left {
+      transform: rotateY(90deg) translateZ(78px) rotateZ(-30deg) rotateY(45deg);
+      border-width: 30px 30px 2px 2px;
+    }
+    square.top {
+      transform: rotateX(90deg) translateZ(73px) rotateX(-30deg) rotateZ(-45deg);
+      border-width: 2px 30px 30px 2px;
+    }
+    square.right {
+      transform: rotateY(-90deg) translateZ(78px) rotateZ(-30deg) rotateY(45deg);
+      border-width: 2px 2px 30px 30px;
+    }
+    main svg text {
+      font-size: 30px;
+      font-family: Arial;
+      font-weight: bold;
+      line-height: 2px;
     }
     main svg {
-      top: -106px;
-      left: calc(50% - 4px);      
+      position: absolute;
+      left: 50%;
+      top: -14px;
+      transform: translate(-50%,0) rotate(45deg);
+      z-index: 2;
+      pointer-events: none;
+      width: 350px;
+      height: 350px;
+      box-sizing: border-box;
+      margin: 0 auto;
     }
-    main.banner {
-      margin: 20% auto;
+  /** IE **/
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      body:before {
+        background: rgb(100,20,220) url(bg.svg);
+        background-attachment: fixed, fixed;
+      }
+      :root {
+        max-height: 100%;
+        overflow: hidden;
+      }
+      circle {
+        transform: translateY(-200px);
+      }
+      main svg {
+        top: -106px;
+        left: calc(50% - 4px);      
+      }
+      main.banner {
+        margin: 20% auto;
+      }
     }
-  }
+  /** Chrome **/
+    @media screen and (-webkit-min-device-pixel-ratio:0) 
+      and (min-resolution:.001dpcm) {
+        main svg {
+          top: -29px;
+        }
+    }
 </style>
 <main class=banner>
   <svg>
